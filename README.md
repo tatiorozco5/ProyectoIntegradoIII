@@ -1,9 +1,9 @@
-# ProyectoIntegradoIII
+# Proyecto Integrado III
 
-#Enlaces
-- Dataset: https://www.datos.gov.co/Salud-y-Protecci-n-Social/Vista-Basado-en-Calidad-del-Agua-para-Consumo-Huma/scc6-pjk6/about_data
+## Enlaces
 - Trello: https://trello.com/b/629iBxiQ/proyecto-integrado-iii
 - Repositorio: https://github.com/tatiorozco5/ProyectoIntegradoIII.git
+- Dataset: https://www.datos.gov.co/Salud-y-Protecci-n-Social/Vista-Basado-en-Calidad-del-Agua-para-Consumo-Huma/scc6-pjk6/about_data
 
 ## Título del proyecto
 
@@ -15,6 +15,10 @@ En Colombia, muchas zonas del país presentan problemáticas ambientales relacio
 Sin embargo, no siempre existe un análisis detallado que permita identificar cómo se distribuyen estas actividades en el territorio, cuáles departamentos presentan mayor intervención, qué tipos de acciones son más frecuentes y cómo ha evolucionado el apoyo ambiental a lo largo del tiempo. La ausencia de este análisis dificulta la toma de decisiones estratégicas y la priorización de recursos para la protección ambiental.
 El dataset seleccionado contiene información sobre las actividades de apoyo realizadas por las Fuerzas Militares en temas ambientales en Colombia, lo que permite realizar un análisis exploratorio para identificar patrones, tendencias y zonas de mayor intervención.
 Además, este análisis puede servir como apoyo para entidades gubernamentales y organizaciones ambientales interesadas en evaluar el impacto de las acciones de protección ambiental y fortalecer las estrategias de sostenibilidad y conservación del territorio colombiano.
+
+## Pregunta de investigación
+
+¿Cómo se distribuyen y evolucionan las actividades de apoyo ambiental realizadas por las Fuerzas Militares en Colombia según el tipo de actividad, ubicación geográfica y período de tiempo reportado?
 
 
 ## Objetivo
@@ -31,13 +35,13 @@ Analizar las actividades de apoyo ambiental realizadas por las Fuerzas Militares
 ## Métricas para evaluar el éxito del análisis
 Para evaluar el éxito del análisis se utilizarán las siguientes métricas:
 
-- Número total de actividades registradas	-> Permite medir el volumen de intervenciones reportadas
-- Distribución por departamento -> Identifica las zonas con mayor actividad ambiental
-- Frecuencia por tipo de actividad	-> Permite reconocer las acciones más realizadas
-- Tendencia temporal ->	Evalúa el comportamiento de las actividades a través del tiempo
-- Calidad de los datos ->	Revisión de valores nulos, duplicados y consistencia del dataset
-- Visualizaciones generadas ->	Cantidad y calidad de gráficos utilizados para interpretar la información
-- Hallazgos identificados ->	Número de patrones o conclusiones relevantes encontradas durante el análisis
+- Número total de actividades registradas: Permite medir el volumen de intervenciones reportadas
+- Distribución por departamento: Identifica las zonas con mayor actividad ambiental
+- Frecuencia por tipo de actividad: Permite reconocer las acciones más realizadas
+- Tendencia temporal:	Evalúa el comportamiento de las actividades a través del tiempo
+- Calidad de los datos:	Revisión de valores nulos, duplicados y consistencia del dataset
+- Visualizaciones generadas:	Cantidad y calidad de gráficos utilizados para interpretar la información
+- Hallazgos identificados:	Número de patrones o conclusiones relevantes encontradas durante el análisis
 
 ## Impacto esperado del proyecto
 
@@ -45,16 +49,16 @@ El desarrollo de este análisis permitirá comprender mejor cómo las Fuerzas Mi
 
 ## Fuente de datos principal
 
-- Nombre del dataset ->	Actividades de apoyo realizadas por las Fuerzas Militares en temas ambientales
-- Fuente	-> Portal de Datos Abiertos del Gobierno de Colombia
-- Origen ->	https://www.datos.gov.co
-- Enlace del dataset	-> https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Actividades-de-apoyo-realizadas-por-las-Fuerzas-Mi/shu7-uqse/about_data
-- Tipo de acceso	-> Datos abiertos públicos
-- Formato disponible	-> CSV, JSON, API
-- Formato utilizado en el proyecto ->	CSV
-- Entidad responsable ->	Ministerio de Defensa Nacional / Datos Abiertos Colombia
-- Temática ->	Medio ambiente y sostenibilidad
-- Idioma ->	Español
+- Nombre del dataset:	Actividades de apoyo realizadas por las Fuerzas Militares en temas ambientales
+- Fuente: Portal de Datos Abiertos del Gobierno de Colombia
+- Origen:	https://www.datos.gov.co
+- Enlace del dataset: https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Actividades-de-apoyo-realizadas-por-las-Fuerzas-Mi/shu7-uqse/about_data
+- Tipo de acceso: Datos abiertos públicos
+- Formato disponible: CSV, JSON, API
+- Formato utilizado en el proyecto:	CSV
+- Entidad responsable:	Ministerio de Defensa Nacional / Datos Abiertos Colombia
+- Temática:	Medio ambiente y sostenibilidad
+- Idioma:	Español
 
 ## Descripción del dataset
 El dataset contiene información relacionada con las actividades de apoyo desarrolladas por las Fuerzas Militares de Colombia en temas ambientales. Los registros permiten identificar aspectos como:
@@ -68,9 +72,9 @@ La información será utilizada para realizar un análisis exploratorio de datos
 
 ## Tamaño del dataset
 
-- Número de filas	- 1858
-- Número de columnas	- 11
-- Tipo de datos -	Datos tabulares estructurados
-- Nivel de actualización -	Dataset actualizado periódicamente por la entidad oficial
+- Número de filas: 1858
+- Número de columnas: 11
+- Tipo de datos:	Datos tabulares estructurados
+- Nivel de actualización:	Dataset actualizado periódicamente por la entidad oficial
 
 
