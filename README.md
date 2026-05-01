@@ -3,6 +3,7 @@
 ## Enlaces
 - Trello: https://trello.com/b/629iBxiQ/proyecto-integrado-iii
 - Repositorio: https://github.com/tatiorozco5/ProyectoIntegradoIII.git
+- Google Colab: https://colab.research.google.com/drive/1iV63Iy-8FO_D7eFZI8G1ChEUIEfh_pu1?usp=sharing
 - Dataset: https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Actividades-de-apoyo-realizadas-por-las-Fuerzas-Mi/shu7-uqse/about_data
 
 ## Título del proyecto
@@ -16,11 +17,6 @@ Sin embargo, no siempre existe un análisis detallado que permita identificar c�
 El dataset seleccionado contiene información sobre las actividades de apoyo realizadas por las Fuerzas Militares en temas ambientales en Colombia, lo que permite realizar un análisis exploratorio para identificar patrones, tendencias y zonas de mayor intervención.
 Además, este análisis puede servir como apoyo para entidades gubernamentales y organizaciones ambientales interesadas en evaluar el impacto de las acciones de protección ambiental y fortalecer las estrategias de sostenibilidad y conservación del territorio colombiano.
 
-## Pregunta de investigación
-
-¿Cómo se distribuyen y evolucionan las actividades de apoyo ambiental realizadas por las Fuerzas Militares en Colombia según el tipo de actividad, ubicación geográfica y período de tiempo reportado?
-
-
 ## Objetivo
 Analizar las actividades de apoyo ambiental realizadas por las Fuerzas Militares en Colombia mediante técnicas de exploración de datos, con el fin de identificar patrones, tendencias y distribución geográfica de las intervenciones ambientales registradas en el dataset.
 
@@ -32,20 +28,26 @@ Analizar las actividades de apoyo ambiental realizadas por las Fuerzas Militares
 -	Detectar posibles patrones o concentraciones de actividades ambientales. 
 -	Generar visualizaciones y métricas que permitan comprender el impacto y alcance de las intervenciones.
 
+## Pregunta de investigación
+
+¿Qué departamentos presentan mayor concentración de actividades ambientales y cuáles son las intervenciones más utilizadas por las Fuerzas Militares para apoyar la protección ambiental en Colombia?
+
 ## Métricas para evaluar el éxito del análisis
 Para evaluar el éxito del análisis se utilizarán las siguientes métricas:
 
-- Número total de actividades registradas: Permite medir el volumen de intervenciones reportadas
-- Distribución por departamento: Identifica las zonas con mayor actividad ambiental
-- Frecuencia por tipo de actividad: Permite reconocer las acciones más realizadas
-- Tendencia temporal:	Evalúa el comportamiento de las actividades a través del tiempo
-- Calidad de los datos:	Revisión de valores nulos, duplicados y consistencia del dataset
-- Visualizaciones generadas:	Cantidad y calidad de gráficos utilizados para interpretar la información
-- Hallazgos identificados:	Número de patrones o conclusiones relevantes encontradas durante el análisis
+- Número de actividades por departamento:	Permite identificar las regiones con mayor concentración de actividades ambientales
+- Frecuencia por tipo de intervención:	Ayuda a determinar cuáles son las actividades ambientales más realizadas
+- Tendencia temporal de actividades:	Permite analizar el comportamiento y evolución de las actividades a través del tiempo
+- Calidad de los datos:	Evalúa la presencia de valores nulos, duplicados y consistencia de la información
+- Hallazgos y visualizaciones generadas:	Mide la capacidad del análisis para identificar patrones y representar la información de forma clara
+
 
 ## Impacto esperado del proyecto
 
-El desarrollo de este análisis permitirá comprender mejor cómo las Fuerzas Militares apoyan la protección ambiental en Colombia, facilitando la identificación de regiones prioritarias y tipos de actividades más relevantes. Asimismo, el proyecto puede aportar información útil para futuras estrategias de sostenibilidad, monitoreo ambiental y toma de decisiones basadas en datos.
+Se espera que este proyecto permita identificar los departamentos con mayor concentración de actividades ambientales realizadas por las Fuerzas Militares, así como reconocer las intervenciones más frecuentes utilizadas para apoyar la protección del medio ambiente en Colombia.
+Además, el análisis facilitará la detección de patrones geográficos y temporales en las actividades registradas, contribuyendo a una mejor comprensión del comportamiento de las acciones ambientales desarrolladas en el país.
+A partir de las métricas y visualizaciones generadas, el proyecto aportará información útil para apoyar la toma de decisiones, fortalecer estrategias de sostenibilidad y promover el uso del análisis de datos como herramienta para el seguimiento y evaluación de iniciativas ambientales.
+
 
 ## Fuente de datos principal
 
