@@ -1,7 +1,7 @@
 # Proyecto Integrado III
 
 ## Enlaces
-- Trello: https://trello.com/b/629iBxiQ/proyecto-integrado-iii
+- Planner: https://github.com/users/tatiorozco5/projects/3
 - Repositorio: https://github.com/tatiorozco5/ProyectoIntegradoIII.git
 - Google Colab: https://colab.research.google.com/drive/1iV63Iy-8FO_D7eFZI8G1ChEUIEfh_pu1?usp=sharing
 - Dataset: https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Actividades-de-apoyo-realizadas-por-las-Fuerzas-Mi/shu7-uqse/about_data
