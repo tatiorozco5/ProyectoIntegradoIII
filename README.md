@@ -81,9 +81,9 @@ La información será utilizada para realizar un análisis exploratorio de datos
 
 
 
-# I. DESCRIPCIÓN DE NECESIDADES DE LIMPIEZA 
+## I. DESCRIPCIÓN DE NECESIDADES DE LIMPIEZA 
 
-### Necesidades de limpieza identificadas (antes de ejecutar el código):
+## Necesidades de limpieza identificadas (antes de ejecutar el código):
 
 1. **Duplicados**: El dataset puede contener filas completamente duplicadas debido a cargas múltiples.  
    - Acción: Eliminar duplicados exactos.
