@@ -113,3 +113,51 @@ La información será utilizada para realizar un análisis exploratorio de datos
    - Original: cada fila es una actividad específica (fecha, lugar, proceso).  
    - Necesidad para responder la pregunta: nivel **mensual por departamento y proceso**.  
    - Acción: Agrupar con `groupby` sumando medios y personal, contando actividades.
+
+### Validación del dataset después de la limpieza y transformación
+
+Una vez aplicado el proceso de limpieza (eliminación de duplicados, imputación de nulos, corrección de tipos, winsorización de outliers y agregación mensual), se evaluó si el conjunto de datos resultante permite responder adecuadamente a la **pregunta de negocio** definida:
+
+> *“¿Cómo varía el uso de recursos (cantidad de medios y personal) en los procesos de gestión del riesgo (prevención, mitigación, respuesta, rehabilitación) a lo largo del tiempo y entre departamentos?”*
+
+### 1. Completitud de los datos
+
+- **Columnas críticas sin nulos**: Después de la limpieza, las columnas esenciales (`FECHA DE INICIO`, `DEPARTAMENTO`, `PROCESO DE GESTIÓN DEL RIESGO`, `CANTIDAD DE MEDIOS EMPLEADOS`, `PERSONAL EMPLEADO`) presentan **0% de valores nulos**.
+- **Agregación sin pérdida de información**: Al agrupar por `DEPARTAMENTO`, `PROCESO DE GESTIÓN DEL RIESGO` y `AÑO_MES` se utilizaron funciones de suma y promedio que conservan la variabilidad original. No se eliminaron filas adicionales durante el `groupby`, por lo que todos los registros limpios contribuyen al análisis agregado.
+
+### 2. Relevancia de las variables
+
+| Variable en el dataset agregado | Rol en la respuesta a la pregunta de negocio |
+|--------------------------------|------------------------------------------------|
+| `DEPARTAMENTO` | Permite comparar recursos entre regiones. |
+| `PROCESO DE GESTIÓN DEL RIESGO` | Diferencia entre prevención, mitigación, respuesta y rehabilitación. |
+| `AÑO_MES` | Base para el análisis temporal (tendencias mensuales, estacionalidad). |
+| `total_medios` / `promedio_medios` | Mide la cantidad de medios empleados (recursos materiales). |
+| `total_personal` / `promedio_personal` | Mide el personal involucrado (recurso humano). |
+| `total_actividades` | Contextualiza el volumen de acciones por grupo. |
+
+Todas las variables anteriores están directamente alineadas con los objetivos del análisis. No se incluyen columnas redundantes o no relacionadas.
+
+### 3. Granularidad adecuada
+
+- **Granularidad original**: Cada fila representaba una actividad puntual (fecha exacta, municipio específico). Era una granularidad **alta**, útil para registros operativos pero con ruido para responder la pregunta de negocio.
+- **Granularidad transformada**: Se agregaron los datos a nivel **mensual por departamento y tipo de proceso**. Este nivel de detalle:
+  - Suaviza fluctuaciones diarias y resalta patrones mensuales.
+  - Permite comparar departamentos y procesos sin pérdida de significado.
+  - Es suficientemente fino para detectar cambios estacionales y tendencias a lo largo del tiempo.
+- **Conclusión**: La granularidad elegida es la **óptima** para responder la pregunta planteada, pues mantiene la dimensión temporal (mes) y espacial (departamento) junto con la clasificación por proceso.
+
+### 4. ¿El dataset limpio permite responder la pregunta de negocio?
+
+**Sí**, de manera completa. Con el dataset agregado (`df_agg`) se pueden realizar análisis como:
+
+- Evolución mensual de medios y personal por proceso (líneas temporales).
+- Comparación de recursos entre departamentos (mapas de calor o barras).
+- Identificación de qué proceso consume más recursos en promedio.
+- Detección de estacionalidades (ej. más medios en respuesta durante temporada de lluvias).
+
+No existen impedimentos de calidad (nulos, outliers extremos no controlados, granularidad inadecuada) que sesguen los resultados.
+
+---
+
+**Estado final**: ✅ **Dataset validado y listo para la fase de análisis y modelado.**
