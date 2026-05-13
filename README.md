@@ -80,3 +80,38 @@ La información será utilizada para realizar un análisis exploratorio de datos
 - Nivel de actualización:	Dataset actualizado periódicamente por la entidad oficial
 
 
+
+# I. DESCRIPCIÓN DE NECESIDADES DE LIMPIEZA 
+
+### Necesidades de limpieza identificadas (antes de ejecutar el código):
+
+1. **Duplicados**: El dataset puede contener filas completamente duplicadas debido a cargas múltiples.  
+   - Acción: Eliminar duplicados exactos.
+
+2. **Valores nulos**:  
+   - `ENTIDAD VINCULADA`: ~12% nulos. Columna categórica relevante para agrupar.  
+   - `CANTIDAD DE MEDIOS EMPLEADOS`: ~1.2% nulos. Variable numérica crítica.  
+   - `MEDIOS EQUIPOS/PLATAFORMAS EMPLEADOS`: pocos nulos (2 filas).  
+   - Fechas (`FECHA DE INICIO`, `FECHA FINAL`): ~2.5% nulos. Esenciales para análisis temporal.  
+   - Acción: Imputar categóricas con 'No especificada', numéricas con mediana (robusta a outliers), fechas nulas se eliminan (pocas).
+
+3. **Inconsistencias en valores**:  
+   - `DEPARTAMENTO`: mezcla de mayúsculas/minúsculas, 'Bogota D.C.' vs 'Bogotá D.C.'.  
+   - `PROCESO DE GESTIÓN DEL RIESGO`: variaciones en mayúsculas.  
+   - Acción: Estandarizar con diccionarios y `replace()`.
+
+4. **Tipos de datos**:  
+   - Fechas están como `object` → convertir a `datetime`.  
+   - Variables categóricas (`DEPARTAMENTO`, `PROCESO`, `ENTIDAD VINCULADA`) → tipo `category` para optimizar memoria.  
+   - Numéricas (`CANTIDAD DE MEDIOS EMPLEADOS`, `PERSONAL EMPLEADO`) → `int` o `float`.
+
+5. **Valores atípicos (outliers)**:  
+   - En `CANTIDAD DE MEDIOS EMPLEADOS` y `PERSONAL EMPLEADO`. Visualizar con boxplots.  
+   - Criterio: No eliminar automáticamente; evaluar si representan eventos reales (ej. desastre grande). Se aplicará **winsorización** (limitar al percentil 99) para no perder información extrema válida.
+
+6. **Granularidad**:  
+   - Original: cada fila es una actividad específica (fecha, lugar, proceso).  
+   - Necesidad para responder la pregunta: nivel **mensual por departamento y proceso**.  
+   - Acción: Agrupar con `groupby` sumando medios y personal, contando actividades.
+
+
